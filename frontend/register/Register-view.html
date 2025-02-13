@@ -5,23 +5,24 @@
         <meta charset="UTF-8"/>
         <link href="Register-css.css" rel="stylesheet">
         <script src="Register-logic.js"></script>
+        <script type="module" src="register.js"></script>
     </head>
     <body>
         <img src="user.png" alt="obrazek">
         <div class="container">
-            <form>
+            <form id="registerForm">
                 <label>Email:</label>
                 <input type="email" name="email" id="login" required>
-                
+
                 <label>Password:</label>
                 <input type="password" name="password" id="psw" required>
 
                 <label>Retype Password:</label>
                 <input type="password" name="password" id="pswd" required>
-                
+
                 <div class="buttons">
                     <button type="submit">Back to login</button>
-                    <button type="button">Register</button>
+                    <button type="submit">Register</button>
                 </div>
             </form>
         </div>
