@@ -1,0 +1,4 @@
+# Ignore IDE and editor config files
+.vscode/
+.idea/
+*.iml
