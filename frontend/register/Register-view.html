@@ -25,12 +25,18 @@
                 </div>
             </form>
         </div>
-        <div id="message">
+        <div id="passwordMessage" class="message">
             <h3>Password must contain the following:</h3>
             <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
             <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
             <p id="number" class="invalid">A <b>number</b></p>
             <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+          </div>
+
+          <div id="emailMessage" class="message">
+            <h3>Email must contain the following:</h3>
+            <p id="at" class="invalid">A <b>@</b> letter</p>
+            <p id="domain" class="invalid">A <b>valid domain</b></p>
           </div>
     </body>
 </html>
