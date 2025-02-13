@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function validateLogin(emailInputToValidate){
-    console.log("hello");
     var email = /[@]/g;
     if(emailInputToValidate.value.match(email)) {
       myAT.classList.remove("invalid");
