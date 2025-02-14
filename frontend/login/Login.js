@@ -1,16 +1,16 @@
 import { API_URL } from "../config.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("registerForm").addEventListener("submit", registerUser);
+    document.getElementById("loginForm").addEventListener("submit", loginUser);
 });
 
-async function registerUser(event) {
+async function loginUser(event) {
     event.preventDefault();
 
-    let email = document.getElementById("login").value;
-    let password = document.getElementById("psw").value;
+    let email = document.getElementById("mail").value;
+    let password = document.getElementById("psswd").value;
 
-    let response = await fetch(API_URL + "register", {
+    let response = await fetch(API_URL + "login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password })
