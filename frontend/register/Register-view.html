@@ -4,25 +4,40 @@
         <title>Login view</title>
         <meta charset="UTF-8"/>
         <link href="Register-css.css" rel="stylesheet">
+        <script src="Register-logic.js"></script>
+        <script type="module" src="register.js"></script>
     </head>
     <body>
         <img src="user.png" alt="obrazek">
         <div class="container">
-            <form>
+            <form id="registerForm">
                 <label>Email:</label>
-                <input type="email" name="email" required>
-                
+                <input type="email" name="email" id="login" required>
+
                 <label>Password:</label>
-                <input type="password" name="password" required>
+                <input type="password" name="password" id="psw" required>
 
                 <label>Retype Password:</label>
-                <input type="password" name="password" required>
-                
+                <input type="password" name="password" id="pswd" required>
+
                 <div class="buttons">
                     <button type="submit">Back to login</button>
-                    <button type="button">Register</button>
+                    <button type="submit">Register</button>
                 </div>
             </form>
         </div>
+        <div id="passwordMessage" class="message">
+            <h3>Password must contain the following:</h3>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+          </div>
+
+          <div id="emailMessage" class="message">
+            <h3>Email must contain the following:</h3>
+            <p id="at" class="invalid">A <b>@</b> letter</p>
+            <p id="domain" class="invalid">A <b>valid domain</b></p>
+          </div>
     </body>
 </html>

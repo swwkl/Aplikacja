@@ -4,16 +4,17 @@
         <title>Login view</title>
         <meta charset="UTF-8"/>
         <link href="Login-css.css" rel="stylesheet">
+        <script type="module" src="Login.js" ></script>
     </head>
     <body>
         <img src="user.png" alt="obrazek">
         <div class="container">
-            <form>
+            <form id="loginForm">
                 <label>Email:</label>
-                <input type="email" name="email" required>
+                <input type="email" name="email" id="mail" required>
                 
                 <label>Password:</label>
-                <input type="password" name="password" required>
+                <input type="password" name="password" id="psswd" required>
                 
                 <div class="buttons">
                     <button type="submit">Login</button>
