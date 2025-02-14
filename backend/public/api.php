@@ -18,7 +18,6 @@ $request = isset($_GET['request']) ? explode('/', trim($_GET['request'], '/')) :
 $db = new Database();
 
 if ($request[0] === "register" && $method === "POST") {
-
     $data = json_decode(file_get_contents("php://input"), true);
     $email = $data["email"];
     $pwd = $data["password"];

@@ -24,5 +24,11 @@ class Database {
         $dbQuery = $this->pdo->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
         return $dbQuery->execute([$email, $password]);
     }
+
+    public function getUser($email) {
+        $dbQuery = $this->pdo->prepare("SELECT * FROM users WHERE email = ?");
+        $dbQuery->execute([$email])
+        return $dbQuery->fetch(PDO::FETCH_ASSOC);
+    }
 }
 ?>
