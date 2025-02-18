@@ -27,8 +27,14 @@ class Database {
 
     public function getUser($email) {
         $dbQuery = $this->pdo->prepare("SELECT * FROM users WHERE email = ?");
-        $dbQuery->execute([$email])
+        $dbQuery->execute([$email]);
         return $dbQuery->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function getToDos($day) {
+        $dbQuery = $this->pdo->prepare("SELECT * FROM todos WHERE DATE(creation_date) = ?");
+        $dbQuery->execute([$day]);
+        return $dbQuery->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 ?>

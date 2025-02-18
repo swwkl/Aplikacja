@@ -89,3 +89,10 @@ button:hover {
     left: -35px;
     content: "✖";
   }
+
+  #registerButton:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
